@@ -6,7 +6,7 @@ services:
     volumes:
       # - ./Volumes/wordpress-db/vulnbox.sql:/docker-entrypoint-initdb.d/vulnbox.sql
       # - database_data:/var/lib/mysql
-      - ./Volumes/wordpress-db/mysql:/var/lib/mysql
+      # - ./Volumes/wordpress-db/mysql:/var/lib/mysql
     restart: always
     environment:
       - MYSQL_DATABASE=vulnbox
