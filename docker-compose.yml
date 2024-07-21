@@ -3,7 +3,7 @@ services:
   wordpress-db:
     image: mariadb
     command: '--default-authentication-plugin=mysql_native_password'
-    volumes:
+    # volumes:
       # - ./Volumes/wordpress-db/vulnbox.sql:/docker-entrypoint-initdb.d/vulnbox.sql
       # - database_data:/var/lib/mysql
       # - ./Volumes/wordpress-db/mysql:/var/lib/mysql
@@ -18,7 +18,7 @@ services:
     image: phpmyadmin
     restart: always
     ports:
-      - 8888:80
+      - 8182:80
     environment:
       - PMA_ARBITRARY=1
       - UPLOAD_LIMIT=100000000
